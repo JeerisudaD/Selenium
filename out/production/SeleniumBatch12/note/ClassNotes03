@@ -7,6 +7,7 @@ Why do we need Xpath and Css Selector?
 What is an Xpath?
 -- xpath is like a query language which helps us to identify elements
 uniquely on the web page
+---------------------------------------------------------------------------------------------------------------
 
 Types of Xpath:
 Absolute Xpath --> starts from the starting node in html
@@ -15,6 +16,7 @@ Absolute Xpath --> starts from the starting node in html
 
 Relative Xpath --> starts from any node in the html
                     it always starts with double slash (//)
+
 
 Syntax for relative xpath:
 //tagname[@attribute = 'attribute value']
@@ -40,7 +42,7 @@ Starts-with will identify the element with partial starting value
 Example: //button[starts-with(@data-testid, 'royal')]
 
 ends-with was used in xpath 1.0, we are using 2.0 and this method is not available
-
+--------------------------------------------------------------------------------------------------
 
 <div> -- division
 <img> -- image
@@ -51,6 +53,7 @@ ends-with was used in xpath 1.0, we are using 2.0 and this method is not availab
 <ol> -- ordered list
 <br> -- breaking line
 
+--------------------------------------------------------------------------------------------------------------------
 
 Advanced Xpath
 is based on parent and child, sibling relationships

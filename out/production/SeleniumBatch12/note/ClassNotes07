@@ -1,0 +1,5 @@
+Class 7
+
+WindowHandle:
+is a unique ID that holds the address of the window or a tab
+It is approximatly

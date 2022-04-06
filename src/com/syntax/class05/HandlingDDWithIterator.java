@@ -12,7 +12,7 @@ import java.util.List;
 public class HandlingDDWithIterator { public static String url = "http://amazon.com";
 
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get(url);
         WebElement departmentsDD = driver.findElement(By.id("searchDropdownBox"));

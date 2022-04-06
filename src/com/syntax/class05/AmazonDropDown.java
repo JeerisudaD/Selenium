@@ -13,7 +13,7 @@ public class AmazonDropDown {
 
     public static void main(String[] args) {
 
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
             WebDriver driver = new ChromeDriver();
             driver.get(url);
             WebElement categoriesDD = driver.findElement(By.id("searchDropdownBox"));

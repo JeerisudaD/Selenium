@@ -1,0 +1,33 @@
+Selenium review class
+
+driver.get()
+driver.navigate.to()
+driver.quit()
+driver.close()
+maximize and fullscreen
+
+HTML: It is a language that has a particular structure and using this particular language
+we can design a front end of any web application
+
+Locators : address or position of web element
+
+What are web element : everything on the webpage
+we need to access to a specific web element to perform certain action
+
+Xpath :
+    Absolute:
+
+    Relative:
+    //tagName[@attribute ='attribute valus']
+    //input[@id='userName']    ---->> SynTax
+    hey dom
+    bring us the tag "input"    ----->> //input
+    who has an attribute id     ----->> [@id]
+    and its value is userName   ----->> [@id='userName']
+
+    we can use start with in the xpath
+    //tagname[Start-with(@attribute,'starting of the attribute value)]
+    //input[start-with(@id,'user')]]
+
+
+

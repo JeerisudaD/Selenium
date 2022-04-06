@@ -35,5 +35,6 @@ public class FBHomeWork {
             //  option.getAttribute("value");
 
         }
+        driver.quit();
     }
 }
