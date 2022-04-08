@@ -16,7 +16,9 @@ public class HandleFrame {
 
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get(url);
+
 
 
         // 1 interact with frame by index

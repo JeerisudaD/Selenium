@@ -6,11 +6,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class Task1_HW {
+public class HWTask1 {
+    /* Open chrome browser
+Go to "http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login"
+Enter valid username and password (username - Admin, password - Hum@nhrm123)
+Click on login button
+Then verify Syntax Logo is displayed.
+     */
+    public static String url ="http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login";
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
+        driver.get(url);
 
         WebElement username = driver.findElement(By.id("txtUsername"));
         username.sendKeys("Admmin");
@@ -19,7 +26,10 @@ public class Task1_HW {
         password.sendKeys("Hum@nhrm123");
 
         driver.findElement(By.xpath("//input[@id='btnLogin']")).click();
-        driver.quit();
+
+        WebElement syntanlogo = driver.findElement(By.xpath("//div[@id='divLogo']/parent::div"));
+        System.out.println("Syntax Logo is displayed : "+syntanlogo.isDisplayed());
+       // driver.quit();
 
     }
 }

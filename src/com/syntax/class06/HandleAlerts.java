@@ -15,10 +15,11 @@ public class HandleAlerts {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get(url);
-        WebElement simpleAlertButton = driver.findElement(By.id("alert"));
-        simpleAlertButton.click();
 
+        WebElement simpleAlertButton = driver.findElement(By.xpath("//button[@id='alert']"));
+        simpleAlertButton.click();
         Alert simpleAlert = driver.switchTo().alert(); // switch the focus to alert
         Thread.sleep(2000);
         simpleAlert.accept(); // handling simple alert
@@ -26,11 +27,17 @@ public class HandleAlerts {
         WebElement confirmAlertButton = driver.findElement(By.id("confirm"));
         confirmAlertButton.click();
         Thread.sleep(2000);
-
         Alert confirmAlert = driver.switchTo().alert(); // switch the focus to alert
         String alertText = confirmAlert.getText();
         System.out.println(alertText);
         confirmAlert.dismiss();
+
+        WebElement promptAlertButton = driver.findElement(By.xpath("//button[@id='prompt']"));
+        promptAlertButton.click();
+        Alert promptAlert = driver.switchTo().alert();
+        Thread.sleep(2000);
+        promptAlert.sendKeys("Batch 12 is the Best!!!");
+        promptAlert.accept();
 
     }
 }
