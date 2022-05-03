@@ -16,13 +16,14 @@ public class AmazonDropDown {
             System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
             WebDriver driver = new ChromeDriver();
             driver.get(url);
+
             WebElement categoriesDD = driver.findElement(By.id("searchDropdownBox"));
             Select select = new Select(categoriesDD);
 
             List<WebElement> options = select.getOptions();
             for(WebElement option:options) {
-                String optionText = option.getText();
-                System.out.println(optionText);
+               String optionText = option.getText();
+               System.out.println(optionText);
             }
 
             select.selectByValue("search-alias=appliances");

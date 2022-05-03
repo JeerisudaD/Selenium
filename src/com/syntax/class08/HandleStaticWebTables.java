@@ -12,12 +12,16 @@ public class HandleStaticWebTables {
     public static String url = "http://syntaxprojects.com/table-search-filter-demo.php";
 
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get(url);
         List<WebElement> rowData = driver.findElements(By.xpath("//table[@id = 'task-table']/tbody/tr")); // storing elements inside the list
         System.out.println(rowData.size());
-
+        /*
+        for(WebElement row:rowData){
+            System.out.println(row.getText());
+        }
+         */
         Iterator<WebElement> it = rowData.iterator(); // creating iterator
         while(it.hasNext()) {
             WebElement row = it.next(); // getting next element

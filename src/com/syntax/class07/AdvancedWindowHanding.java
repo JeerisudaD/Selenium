@@ -38,7 +38,7 @@ public class AdvancedWindowHanding {
                 driver.close();
             }
         }
-        driver.switchTo().window(mainPageHandle);  // swithing back to parent handle
+        driver.switchTo().window(mainPageHandle);  // switching back to parent handle
         igButton.click();
     }
 }

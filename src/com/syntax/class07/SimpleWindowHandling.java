@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class SimpleWindowHandling {
-    /* clicck onHelp Link
+    /* click onHelp Link
     switch between tabs
      */
 

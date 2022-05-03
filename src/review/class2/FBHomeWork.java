@@ -14,9 +14,11 @@ public class FBHomeWork {
         WebDriver driver = new ChromeDriver();
         driver.get("https://fb.com");
         driver.manage().window().maximize();
+
         WebElement createNewAccount = driver.findElement(By.linkText("Create new account"));
         createNewAccount.click();
         Thread.sleep(3000);
+
         // get the desired dropdown
         WebElement daysoption = driver.findElement(By.id("day"));
         // use selenium select class

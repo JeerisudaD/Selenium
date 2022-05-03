@@ -24,7 +24,6 @@ Print to console only the links that has text
 
         List<WebElement> allLinks = driver.findElements(By.tagName("a"));
         System.out.println("Number of links " + allLinks.size());
-        System.out.println(allLinks);
 
         for(WebElement links:allLinks){
             String  linkWText = links.getText();

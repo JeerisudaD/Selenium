@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HWTask3 {
     /* HRMS Application Negative Login:
-Open chrome browser
+Open Chrome browser
 Go to "http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login"
 Enter valid username
 Leave password field empty
@@ -30,6 +30,7 @@ Verify error message with text "Password cannot be empty" is displayed.
 
         WebElement errorText = driver.findElement(By.id("spanMessage"));
         String verifyText = "Password cannot be empty";
+
         if(verifyText.equalsIgnoreCase(errorText.getText())){
             System.out.println(" \"Password cannot be empty\" is displayed.");
         }else{

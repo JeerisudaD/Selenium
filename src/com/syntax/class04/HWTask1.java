@@ -13,23 +13,25 @@ Enter valid username and password (username - Admin, password - Hum@nhrm123)
 Click on login button
 Then verify Syntax Logo is displayed.
      */
-    public static String url ="http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login";
+    public static String url = "http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login";
+
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get(url);
 
         WebElement username = driver.findElement(By.id("txtUsername"));
-        username.sendKeys("Admmin");
+        username.sendKeys("Admin");
 
         WebElement password = driver.findElement(By.id("txtPassword"));
         password.sendKeys("Hum@nhrm123");
 
         driver.findElement(By.xpath("//input[@id='btnLogin']")).click();
 
-        WebElement syntanlogo = driver.findElement(By.xpath("//div[@id='divLogo']/parent::div"));
-        System.out.println("Syntax Logo is displayed : "+syntanlogo.isDisplayed());
-       // driver.quit();
+        WebElement syntaxlogo = driver.findElement(By.cssSelector("img[alt*='OrangeHRM']"));
+        System.out.println("Syntax Logo is displayed : " + syntaxlogo.isDisplayed());
+        // driver.quit();
 
     }
 }
+

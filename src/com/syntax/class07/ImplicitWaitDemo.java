@@ -11,12 +11,13 @@ public class ImplicitWaitDemo {
     public static String url = "http://syntaxprojects.com/index.php";
 
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         WebElement startPracticingButton = driver.findElement(By.id("btn_basic_example"));
         startPracticingButton.click();
+
 
     }
 }
